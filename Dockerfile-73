@@ -71,7 +71,7 @@ RUN apt-get update && \
 #####################################
 
 # Install composer and add its bin to the PATH.
-RUN curl -s http://getcomposer.org/installer | php && \
+RUN curl -s https://getcomposer.org/download/1.10.17/composer.phar | php && \
     echo "export PATH=${PATH}:/var/www/vendor/bin" >> ~/.bashrc && \
     mv composer.phar /usr/local/bin/composer
 
